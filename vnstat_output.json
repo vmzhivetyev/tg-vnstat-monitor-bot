@@ -1,0 +1,63 @@
+{
+    "vnstatversion": "2.9",
+    "jsonversion": "2",
+    "interfaces": [
+        {
+            "name": "tun0",
+            "alias": "",
+            "created": {
+                "date": {
+                    "year": 2022,
+                    "month": 5,
+                    "day": 28
+                }
+            },
+            "updated": {
+                "date": {
+                    "year": 2022,
+                    "month": 7,
+                    "day": 4
+                },
+                "time": {
+                    "hour": 20,
+                    "minute": 50
+                }
+            },
+            "traffic": {
+                "total": {
+                    "rx": 6788825497,
+                    "tx": 152528737867
+                },
+                "month": [
+                    {
+                        "id": 1,
+                        "date": {
+                            "year": 2022,
+                            "month": 5
+                        },
+                        "rx": 594243013,
+                        "tx": 42268733168
+                    },
+                    {
+                        "id": 4,
+                        "date": {
+                            "year": 2022,
+                            "month": 6
+                        },
+                        "rx": 6041487755,
+                        "tx": 104984987793
+                    },
+                    {
+                        "id": 7,
+                        "date": {
+                            "year": 2022,
+                            "month": 7
+                        },
+                        "rx": 153094729,
+                        "tx": 5275016906
+                    }
+                ]
+            }
+        }
+    ]
+}
