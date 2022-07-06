@@ -22,6 +22,9 @@ sudo systemctl start vnstat.service
 
 # check service status
 sudo systemctl status vnstat.service
+
+# check that vnstat is working
+vnstat
 ```
 
 # the script
