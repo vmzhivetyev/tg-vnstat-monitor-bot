@@ -53,10 +53,10 @@ async def send_status(chat_id):
     if percent_used > 90: emoji = '💥'
     text = f'''Usage on {interface_name} in {month}:
 ⬇️ rx {human_bytes(rx)}
-⬆️ tx {human_bytes(tx)}
+⬆️ tx {human_bytes(tx)} (limit: {human_bytes(LIMIT_GIB)})
 Total: {human_bytes(total)}
 
-TX Limit: {emoji} {percent_used:.2f}% used out of {human_bytes(LIMIT_GIB)}
+TX Limit: {emoji} {percent_used:.2f}% used
 '''
     await application.bot.send_message(chat_id=chat_id, text=text)
 
