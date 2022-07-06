@@ -5,6 +5,10 @@ Script reports traffic usage in current month (from vnstat tool)
 * python3
 * vnstat 
 
+# How it looks?
+
+![screenshot](readme/screenshot.png)
+
 # Installation
 
 # vnstat
@@ -40,7 +44,7 @@ cd tg-vnstat-monitor-bot
 pip3 install -r requirements.txt
 ```
 
-2) Make a run-script like this
+2) Make a run-script like this at `~/vnstat-watchdog/report.sh`
 
 ```sh
 #!/bin/bash
@@ -64,5 +68,6 @@ python3 main.py
 
 ```sh
 # every day at 13:00. see: https://crontab.guru/#0_13_*_*_*
+# assuming that /home/user/ is your $HOME.
 0 13 * * * cd /home/user/vnstat-watchdog && ./report.sh > /dev/null
 ```
