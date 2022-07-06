@@ -41,7 +41,8 @@ async def status(update: Update, context: CallbackContext):
 
 async def send_status(chat_id):
     interface_name, rx, tx, total, month = vnstat_this_month_usage(interface_name=INTERFACE)
-    percent_used = total / LIMIT_GIB * 100
+    limited_amount = tx
+    percent_used = limited_amount / LIMIT_GIB * 100
     emoji = '🍏'
     if percent_used > 20: emoji = '✍️'
     if percent_used > 30: emoji = '🧐'
@@ -51,11 +52,11 @@ async def send_status(chat_id):
     if percent_used > 80: emoji = '❗️'
     if percent_used > 90: emoji = '💥'
     text = f'''Usage on {interface_name} in {month}:
-⬇️{human_bytes(rx)}
-⬆️{human_bytes(tx)}
+⬇️ rx {human_bytes(rx)}
+⬆️ tx {human_bytes(tx)}
 Total: {human_bytes(total)}
 
-Limit: {human_bytes(LIMIT_GIB)} ({emoji} {percent_used:.2f}% used)
+TX Limit: {emoji} {percent_used:.2f}% used out of {human_bytes(LIMIT_GIB)}
 '''
     await application.bot.send_message(chat_id=chat_id, text=text)
 
